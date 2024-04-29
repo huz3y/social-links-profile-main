@@ -7,11 +7,31 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; //1rem = 10px
+
+  @include respond(big-desktop) {
+    font-size: 81.25%; //1rem = 13px
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1rem = 8px
+  }
+
+  @include respond(phone) {
+    font-size: 43.75%; //1rem = 7px
+  }
+
+  @include respond(small-phone) {
+    font-size: 37.5%; //1rem = 6px
+  }
 }
 
 body {
   box-sizing: border-box;
   background-color: var(--color-off-black);
   padding: 10rem 15rem;
+
+  @include respond(phone) {
+    padding: 10rem 3rem;
+  }
 }

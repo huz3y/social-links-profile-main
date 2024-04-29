@@ -1,3 +1,18 @@
+/*  
+    0   - 400px:    small-phone
+    400 - 600px:    phone
+    600 - 900px:    Tablet(portrait)
+    900 - 1200px:   Tablet(landscape)
+    (1200 to 1800px is where our normal styles apply)
+    1800px +:       Big Desktop
+
+    $breakpoint argument choices:
+    -small-phone
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+*/
 :root {
   --color-primary: hsl(75, 94%, 57%);
   --color-white: hsl(0, 0%, 100%);
@@ -18,11 +33,36 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 81.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  html {
+    font-size: 37.5%;
+  }
+}
 
 body {
   box-sizing: border-box;
   background-color: var(--color-off-black);
   padding: 10rem 15rem;
+}
+@media only screen and (max-width: 37.5em) {
+  body {
+    padding: 10rem 3rem;
+  }
 }
 
 body {
@@ -62,6 +102,11 @@ body {
   border-radius: 10px;
   transition: all 0.2s;
 }
+@media only screen and (max-width: 37.5em) {
+  .btn:link, .btn:visited {
+    border-radius: 5px;
+  }
+}
 .btn:hover, .btn:active {
   background-color: var(--color-primary);
   color: var(--color-off-black);
@@ -78,6 +123,16 @@ body {
   grid-template-rows: min-content repeat(2, min-content) 1fr;
   justify-items: center;
   font-size: 1.4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .login-box {
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  .login-box {
+    max-width: 100%;
+  }
 }
 .login-box__details {
   display: flex;
