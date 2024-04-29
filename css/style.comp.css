@@ -1,0 +1,149 @@
+/*  
+    0   - 400px:    small-phone
+    400 - 600px:    phone
+    600 - 900px:    Tablet(portrait)
+    900 - 1200px:   Tablet(landscape)
+    (1200 to 1800px is where our normal styles apply)
+    1800px +:       Big Desktop
+
+    $breakpoint argument choices:
+    -small-phone
+    -phone
+    -tab-port
+    -tab-land
+    -big-desktop
+*/
+:root {
+  --color-primary: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 20%);
+  --color-dark-grey: hsl(0, 0%, 12%);
+  --color-off-black: hsl(0, 0%, 8%);
+  --font-primary: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 81.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-off-black);
+  padding: 10rem 15rem;
+}
+@media only screen and (max-width: 37.5em) {
+  body {
+    padding: 10rem 3rem;
+  }
+}
+
+body {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.heading-primary {
+  font-size: 2.6rem;
+  font-weight: 400;
+  padding: 0.3rem;
+}
+
+.heading-secondary {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.paragraph {
+  opacity: 0.6;
+  font-size: 1.4rem;
+  padding: 2.3rem;
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  background-color: var(--color-grey);
+  padding: 1.5rem 3rem;
+  margin: 1rem auto;
+  width: 100%;
+  color: var(--color-white);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+@media only screen and (max-width: 37.5em) {
+  .btn:link, .btn:visited {
+    border-radius: 5px;
+  }
+}
+.btn:hover, .btn:active {
+  background-color: var(--color-primary);
+  color: var(--color-off-black);
+}
+
+.login-box {
+  background-color: var(--color-dark-grey);
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 4rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: min-content repeat(2, min-content) 1fr;
+  justify-items: center;
+  font-size: 1.4rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .login-box {
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  .login-box {
+    max-width: 100%;
+  }
+}
+.login-box__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-box__profile-pic {
+  width: 8.5rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=style.comp.css.map */
