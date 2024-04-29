@@ -1,0 +1,22 @@
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    background-color: var(--color-grey);
+    padding: 1.5rem 3rem;
+    margin: 1rem auto;
+    width: 100%;
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: all 0.2s;
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-primary);
+    color: var(--color-off-black);
+  }
+}

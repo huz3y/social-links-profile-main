@@ -1,0 +1,94 @@
+:root {
+  --color-primary: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 20%);
+  --color-dark-grey: hsl(0, 0%, 12%);
+  --color-off-black: hsl(0, 0%, 8%);
+  --font-primary: "Inter", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--color-off-black);
+  padding: 10rem 15rem;
+}
+
+body {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.heading-primary {
+  font-size: 2.6rem;
+  font-weight: 400;
+  padding: 0.3rem;
+}
+
+.heading-secondary {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.paragraph {
+  opacity: 0.6;
+  font-size: 1.4rem;
+  padding: 2.3rem;
+}
+
+.btn:link, .btn:visited {
+  display: inline-block;
+  background-color: var(--color-grey);
+  padding: 1.5rem 3rem;
+  margin: 1rem auto;
+  width: 100%;
+  color: var(--color-white);
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+.btn:hover, .btn:active {
+  background-color: var(--color-primary);
+  color: var(--color-off-black);
+}
+
+.login-box {
+  background-color: var(--color-dark-grey);
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 4rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: min-content repeat(2, min-content) 1fr;
+  justify-items: center;
+  font-size: 1.4rem;
+}
+.login-box__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-box__profile-pic {
+  width: 8.5rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

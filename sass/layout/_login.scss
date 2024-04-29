@@ -1,0 +1,28 @@
+.login-box {
+  background-color: var(--color-dark-grey);
+  max-width: 40rem;
+  margin: 0 auto;
+  min-height: 100%; //TESTING
+  padding: 4rem;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: min-content repeat(2, min-content) 1fr;
+  justify-items: center;
+  font-size: 1.4rem;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__profile-pic {
+    width: 8.5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+  }
+
+  &__links {
+  }
+}
